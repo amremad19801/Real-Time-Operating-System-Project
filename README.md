@@ -13,8 +13,13 @@
 
 <h3>The callback function for each timer is specified as follows.</h3>
 
-<p>Sender Timer Callback Function: When called it releases a dedicated semaphore on which the sender task is waiting/blocked on. The sender task is then unblocked and can send to the queue. Receiver Timer Callback Function: When called it releases a dedicated semaphore on which the receiver task is waiting/blocked on.</p>
-<h3>The receiver task is then unblocked and performs a read on the queue as described above.</h3>
+<h4>Sender Timer Callback Function:</h4>
+
+<p>When called it releases a dedicated semaphore on which the sender task is waiting/blocked on. The sender task is then unblocked and can send to the queue.</p>
+
+<h4>Receiver Timer Callback Function:</h4>
+
+<p>When called it releases a dedicated semaphore on which the receiver task is waiting/blocked on. The receiver task is then unblocked and performs a read on the queue as described above.</p>
 
 <h4>When the receiver receives 500 messages, the receiver timer callback function calls the “Reset” function that performs the following:</h4>
 <p>
