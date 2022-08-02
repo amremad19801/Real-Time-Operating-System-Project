@@ -8,12 +8,12 @@
       <p>The receiver task sleeps for another FIXED period of time Treceiver and then wakes up and checks for any received message in the queue. If there is a message          in the queue, it reads it, increments total number of received messages and sleeps again. If there is no message it sleeps again immediately. Note that                receiver reads one message at a time even if there are more than one message in the queue. The sleep/wake control of the three tasks is performed via three            timers one for each task.
       </p>
       <h3>The callback function for each timer is specified as follows.</h3>
-        <h4>Sender Timer Callback Function:</h4>
+        <h3>Sender Timer Callback Function:</h3>
           <p>When called it releases a dedicated semaphore on which the sender task is waiting/blocked on. The sender task is then unblocked and can send to the queue.           </p>
-        <h4>Receiver Timer Callback Function:</h4>
+        <h3>Receiver Timer Callback Function:</h3>
           <p>When called it releases a dedicated semaphore on which the receiver task is waiting/blocked on. The receiver task is then unblocked and performs a read on              the queue as described above.
           </p>
-        <h4>When the receiver receives 500 messages, the receiver timer callback function calls the “Reset” function that performs the following:</h4>
+        <h3>When the receiver receives 500 messages, the receiver timer callback function calls the “Reset” function that performs the following:</h3>
           <p><br>Print the total number of successfully sent messages and the total number of blocked messages.</br>
              <br>Reset the total number of successfully sent messages, the total number of blocked messages and received message.</br>
              <br>Clears the queue.</br>
