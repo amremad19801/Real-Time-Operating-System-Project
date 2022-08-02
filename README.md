@@ -14,15 +14,11 @@
           <p>When called it releases a dedicated semaphore on which the receiver task is waiting/blocked on. The receiver task is then unblocked and performs a read on              the queue as described above.
           </p>
         <h4>When the receiver receives 500 messages, the receiver timer callback function calls the “Reset” function that performs the following:</h4>
-          <p>Print the total number of successfully sent messages and the total number of blocked messages.
-  
-             Reset the total number of successfully sent messages, the total number of blocked messages and received message.
-
-             Clears the queue.
-  
-             Configure the values controlling the sender timer period Tsender to the next values in two arrays specifying the lower and upper bound values of the                    uniformly distributed timer period. The first array holds the values {50, 80, 110, 140, 170, 200} and the second holds the values {150, 200, 250, 300,                  350, 400} expressing in msec the timer lower and upper bounds for a uniform distribution. When the system starts initially it starts with the values 50                and 150. If all values in the array are used, destroy the timers and print a message “Game Over”and stop execution.
-
-             In all iterations Treceiver is fixed at 100 msec.
+          <p><br>Print the total number of successfully sent messages and the total number of blocked messages.</br>
+             <br>Reset the total number of successfully sent messages, the total number of blocked messages and received message.</br>
+             <br>Clears the queue.</br>
+             <br>Configure the values controlling the sender timer period Tsender to the next values in two arrays specifying the lower and upper bound values of the                    uniformly distributed timer period. The first array holds the values {50, 80, 110, 140, 170, 200} and the second holds the values {150, 200, 250, 300,                  350, 400} expressing in msec the timer lower and upper bounds for a uniform distribution. When the system starts initially it starts with the values                    50 and 150. If all values in the array are used, destroy the timers and print a message “Game Over”and stop execution.</br>
+             <br>In all iterations Treceiver is fixed at 100 msec.</br>
           </p>
   <h2>Files</h2>
     <p>main.c : This file contains the code of the project.</p>
