@@ -1,7 +1,8 @@
 <h1>Real-Time-Operating-System-Project</h1>
-  <p>The project is a communication system between three tasks via a queue of fixed size implemented using FreeRTOS on the target emulation board provided via Eclipse      CDT Embedded.
-  </p>
   <h2>Project Description</h2>
+    <p>The project is a communication system between three tasks via a queue of fixed size implemented using FreeRTOS on the target emulation board provided via              Eclipse CDT Embedded.
+    </p>
+  <h2>Project Specifications</h2>
     <h3>Three tasks communicate via a queue of fixed size as described below</h3>
       <p>There are two sender tasks. Each sender task sleeps for a RANDOM period of time Tsender and when it wakes up it sends a message to the queue containing the            string “Time is XYZ” where XYZ is current time in system ticks. If the queue is full, the sending operation fails and a counter counting total number of                blocked  messages is incremented. Upon successful sending, a counter counting total number of transmitted messages is incremented. The sender task is then              blocked for another random period again.
       </p>
